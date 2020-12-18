@@ -1,0 +1,570 @@
+
+@mixin traitsgauche{
+  background-size: 100%;
+  content: "";
+  width: 40%;
+  height:20px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  margin-right: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin traisdroit{
+  background-size: 100%;
+  content: "";
+  width: 40%;
+  height:20px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-left: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin lestraits{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.menus{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+     }
+  .menu__front{
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    width: 25vw;
+    height: 350px;
+    margin: 3%;
+    border: 0.5px grey solid;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    padding: 13% 0;
+    }
+  
+  .zoom:hover{
+    transform:scale(1.5);
+    transition:transform 400ms;
+    overflow: hidden;
+  }
+    
+  body{ 
+    margin:auto;
+  }
+  
+  #mentions{color:yellow;
+            font-size: 1.2em;
+            justify-content: space-between;
+  }
+  #menu1{
+    background-color:#fce0dc;
+    padding: 9% 0;
+    }
+    .fab{
+      font-size: 2em;
+      background: linear-gradient(to right, #be4600 0%, #ebdd5f 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  .fas{
+    font-size: 2em;
+    background: linear-gradient(to right, #be4600 0%, #ebdd5f 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  #menu1 h2, h3{
+    font-family: "Dancing Script";
+  }
+  #menu3{
+    font-family: "Dancing Script";
+  }
+  #menu4{
+    font-family: "Dancing Script";
+  }
+  
+  #menu2 {background-color:#fff5fe;
+  }
+  #menu2 h2{font-family: "Montserrat Alternates", sans-serif;
+  }
+  $anim-dur: 1000ms;
+  $anim-delay: $anim-dur / 5;
+  $head-font: Calibri;
+  $h1color: #fdcb46;
+  $bgcolor:#579c87;
+  @mixin dot {
+      height: 15px;
+      background: $h1color;
+      border-radius:50%;
+      width: 15px;
+      }
+      @keyframes bars {
+          0%{
+              transform: scale(0)
+          }
+          100%{
+              transform: scale(0.9);
+          }
+      }
+  
+  
+  .prochainement
+  { 
+      display: flex;
+      justify-content: space-evenly;
+      margin: auto ;
+      padding: 6px 0 6px 0; 
+      font-family:$head-font;
+      font-size: 1.7rem;
+      text-decoration: none;
+      background-color: $bgcolor;
+      color: $h1color;
+      border-radius: 10px; 
+      width: 35%;
+      align-items: center;
+                  &__dot
+                  {
+                  display: flex;
+                  width: auto;
+                  border-radius:50%;
+                  animation: bars $anim-dur backwards infinite;
+                  animation-direction: normal;
+                  }
+  
+                  &__dot--b1
+                  {
+                      @include dot;
+                      animation-delay: 200ms;
+  
+                  }
+                  &__dot--b2
+                  {
+                      @include dot;
+                      animation-delay: 400ms;
+  
+                  }
+                  &__dot--b3
+                  {
+                      @include dot;
+                      animation-delay: 600ms;
+  
+                  }
+  
+              }
+              .mainmenu {
+                width: 55%;
+                margin: auto;
+                padding: 40px 12% 40px 12%;
+                box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+            }
+            header {
+                background-color: #569d88;
+                height: 100px;
+                margin-bottom: 30px;
+                text-align: center;
+              }
+              .body{
+                width:100%;
+              }
+              
+              a {
+                text-decoration: none;
+              }
+              
+              header h1 {
+                color: #fdcb46;
+                margin: 0em;
+                text-align: center;
+                position: relative;
+                top: 15px;
+                font-size: 2.5em;
+                text-decoration: none;
+              }
+              
+#mentions {
+    color: yellow;
+    font-size: 1.2em;
+    justify-content: space-between;
+  }
+  
+  #menu1, #menu2, #menu3, #menu4 {
+  font-family: "Dancing Script";
+          h3{text-transform: uppercase;}
+  }
+  #menu1{background-color: #fcdfdb;}
+  
+  #menu2 h2 {
+    background-color: #fff5fe;
+    font-family: "Arial, Helvetica, sans-serif";
+    background-color: slateblue;
+    background-image: linear-gradient(45deg, #ffc042 0%, #6B0AC5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;  
+  }
+  #menu2 h3
+  {background-color: #fff5fe;
+  font-family: "Dancing Script";
+  background-color: slateblue;
+  background-image: linear-gradient(45deg, #ffc042 0%, #6B0AC5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;  
+  text-transform: uppercase;
+  }
+  #menu3 h2{
+    background-color: #fff5fe;
+    font-family: "Dancing Script";
+    background-color: slateblue;
+    background-image: linear-gradient(45deg, #1A99F7,#00F0FC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;  
+  }
+  #menu3 h3 {background-color: #fff5fe;
+    font-family: "Dancing Script";
+    background-color: slateblue;
+    background-image: linear-gradient(45deg, #1A99F7,#00F0FC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; 
+   }
+  #menu4 h2 { background-color: #fff5fe;
+    font-family: "Dancing Script";
+    background-color: slateblue;
+    background-image: linear-gradient(45deg,#2B8A47,#9effd7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; 
+  }
+  #menu4 h3 { background-color: #fff5fe;
+    font-family: "Dancing Script";
+    background-color: slateblue;
+    background-image: linear-gradient(45deg,#2B8A47,#9effd7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  
+  @keyframes bars {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  // .prochainement {
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   margin: auto;
+  //   padding: 6px 0 6px 0;
+  //   font-family: Calibri;
+  //   font-size: 1.7rem;
+  //   text-decoration: none;
+  //   background-color: #579c87;
+  //   color: #fdcb46;
+  //   border-radius: 10px;
+  //   width: 17%;
+  //   align-items: center;
+  
+  // }
+  .prochainement__dot {
+    display: flex;
+    width: auto;
+    border-radius: 50%;
+    animation: bars 1000ms backwards infinite;
+    animation-direction: normal;
+  }
+  .prochainement__dot--b1 {
+    height: 15px;
+    background: #fdcb46;
+    border-radius: 50%;
+    width: 15px;
+    animation-delay: 200ms;
+  }
+  .prochainement__dot--b2 {
+    height: 15px;
+    background: #fdcb46;
+    border-radius: 50%;
+    width: 15px;
+    animation-delay: 400ms;
+  }
+  .prochainement__dot--b3 {
+    height: 15px;
+    background: #fdcb46;
+    border-radius: 50%;
+    width: 15px;
+    animation-delay: 600ms;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #579c87;
+    margin-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    bottom: 0;
+    height: 80px;
+    h4{align-self: center;
+      &:hover{
+        animation: headshake 200ms cubic-bezier(.6,.3,.9,.2);
+    }
+  }
+  
+  }
+  $shake-intensity: 5%;
+
+  @keyframes headshake {
+    25% {
+        transform: translateX($shake-intensity);
+    }
+    75% {
+        transform: translateX($shake-intensity * -1);
+    }
+}
+  
+  footer a {
+    color: #fdcb46;
+    font-size: 1.2em;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    overflow: hidden;
+    justify-content: space-between;
+    align-self: center;
+   
+    
+  }
+  
+   body {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);}
+  
+  .mainmenuenchant{
+       background-color: #fcdfdb;
+      font-family: "Dancing Script", cursive;
+      width:80%;
+      margin:auto;
+      padding: 40px 12% 40px 12%;
+      box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+      h3  { 
+        font-size: 1.5em;
+        color: black;}
+       
+          }
+  .mainmenuchic{
+    font-family: "Montserrat Alternates", sans-serif;
+    width:80%;
+    margin:auto;
+    padding: 40px 12% 40px 12%;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+    h3  { 
+      padding: 0 10px 0 10px;
+      font-size: 1.5em;
+      white-space: nowrap;
+     }
+    h1 {background: linear-gradient(to right, #ffc042 0%, #6B0AC5 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+    }
+    .mainmenupapilles{
+      font-family: "Montserrat Alternates", sans-serif;
+      width:80%;
+      margin:auto;
+      padding: 40px 12% 40px 12%;
+      box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+      background-repeat: no-repeat;
+      h3  { 
+        padding: 0 30px 0 10px;
+        font-size: 1.5em;   
+    }
+  }
+  .mainmenuexquisse{
+    font-family: "Montserrat Alternates", sans-serif;
+      width:80%;
+      margin:auto;
+      padding: 40px 12% 40px 12%;
+      box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+    }
+      h3  { 
+        padding: 0 30px 0 30px;
+        font-size: 1.5em;}
+          h5  {
+            background: linear-gradient(to right, #030097 0%, #26a5fa 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; 
+            font-size: 1.5em;
+          }
+    .main
+  .mainmenu{
+      font-family: "Montserrat Alternates", sans-serif;
+      width:50%;
+      margin:auto;
+      padding: 40px 12% 40px 12%;
+      box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.68);
+  }
+  h4{
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+  }
+  .premier_trait, .premier_trait1,.premier_trait2,.premier_trait3
+{ @include lestraits;}
+
+.premier_trait::before
+{
+  background-image: url('../images/traitnoir.png');
+  background-size: 100%;
+  content: "";
+  width: 100%;
+  height: 10px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+   white-space: nowrap;
+   -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-right: 4%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.premier_trait::after
+{
+  background-image: url('../images/traitnoir.png');
+  background-size: 100%;
+  content: "";
+  width: 100%;
+  height:10px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  margin-left: 4%;
+  background-repeat: no-repeat;
+  background-position: center;
+ h3{ margin:5%;
+     white-space: nowrap;
+     
+                 }
+  }
+  .premier_traitvert::before{
+    background-image: url('../images/menuvert.png');
+    background-size: 100%;
+    content: "";
+    width: 100%;
+    height: 40px;
+    flex: 1;
+    display:flex;
+    justify-content: center;
+     white-space: nowrap;
+     -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-right: 4%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .premier_traitvert::after
+{
+  background-image: url('../images/menuvert.png');
+  background-size: 100%;
+  content: "";
+  width: 100%;
+  height:40px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  margin-left: 4%;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+ h3{ margin:5%;
+     white-space: nowrap;}
+      }
+  .premier_traitvert{
+    display: contents;
+  }    
+  .premier_trait1::before{
+    background-image: url('../images/traitmenu4.png');
+   @include traitsgauche;
+  }
+  .premier_trait1::after{ background-image: url('../images/traitmenu4.png');
+   @include traisdroit;
+  }
+  .premier_trait2::before{
+    background-image: url('../images/traitmenu4.png');
+  @include traitsgauche;}
+
+  .premier_trait2::after{ background-image: url('../images/traitmenu4.png');
+    @include traisdroit;
+  }
+  .premier_trait3::before{ background-image: url('../images/menutrait3.png');
+    background-size: 100%;
+    @include traitsgauche;}
+    
+  .premier_trait3::after{ background-image: url('../images/menutrait3.png');
+      @include traisdroit;}
+  a
+  {color: black;}
+
+  .traitgauche{
+    border-bottom: 3px solid;
+    width: 50%;
+    margin: auto;
+    margin-left: 0%;
+    margin-right: 4%;
+  }
+  .traitdroit{
+    border-bottom: 3px solid;
+    width: 50%;
+    margin: auto;
+    margin-left: 4%;
+  }
+  .trait{ display:flex;
+  text-align: center ;
+  align-items: center;
+  }
+    
+  .appetit{color: #CE8800;
+  }
+  .papilles{
+   color:#663399
+  }
+  .Gourmandises{
+    color:#1E90FF
+  }
+  .prix2{text-align-last: start;}
+  
+  .prix
+  {display: flex;
+   justify-content: space-between;
+   font-size:1.3em;
+  }
+  
+  
+   
+
+    
